@@ -8,6 +8,8 @@ while reload == True:
     minutes = abs(int(input('How many minutes is the video? ')))
     seconds = abs(int(input('How many seconds is the video? ')))
     speed = abs(float(input('What is the new speed? ')))
+    if speed < 0:
+        print('Speed must be greater than 0')
 
     #### Time Conversions to Hours ####
     # convert minutes to hours
