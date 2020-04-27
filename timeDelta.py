@@ -41,12 +41,14 @@ while reload == True:
     
     print('\nThe total time now is',int(newHr),'hour(s)',int(hrToMin),'minute(s)',int(round(minToSec)),'second(s).')
     if (DiffHr or deltaHrToMin or deltaMinToSec) < 0:
-        print('Taking',abs(int(DiffHr)),'hour(s)',abs(int(deltaHrToMin)),'minute(s)',abs(int(round(deltaMinToSec))),'second(s) longer.')
+        print('\n******Taking',abs(int(DiffHr)),'hour(s)',abs(int(deltaHrToMin)),'minute(s)',abs(int(round(deltaMinToSec))),'second(s) longer.******')
     else:
-        print('You have saved',int(DiffHr),'hour(s)',int(deltaHrToMin),'minute(s)',int(round(deltaMinToSec)),'second(s).')
+        print('\n******You have saved',int(DiffHr),'hour(s)',int(deltaHrToMin),'minute(s)',int(round(deltaMinToSec)),'second(s).******')
     calcAnother = input('\nWould you like to run calculator again? (yes/no)').casefold()
 
     #### Try Again? ####
     if calcAnother == 'yes': reload = True
     elif calcAnother == 'y': reload = True
     elif calcAnother != 'yes': break
+
+    ### Exceptions and negative values need to be addressed ###
